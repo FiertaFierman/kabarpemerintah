@@ -20,3 +20,6 @@ db.sqlite3
 # Mac system file
 .DS_Store
 
+# Media and static files
+staticfiles/
+media/
