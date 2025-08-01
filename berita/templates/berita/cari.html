@@ -1,0 +1,15 @@
+{% extends 'berita/base.html' %}
+{% block title %}Hasil Pencarian{% endblock %}
+
+{% block content %}
+<h2>Hasil Pencarian: "{{ query }}"</h2>
+{% if hasil %}
+    <ul>
+    {% for berita in hasil %}
+        <li><a href="{% url 'berita:detail' berita.id %}">{{ berita.judul }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>Tidak ada hasil ditemukan.</p>
+{% endif %}
+{% endblock %}

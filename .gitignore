@@ -1,0 +1,22 @@
+# Python
+*.pyc
+__pycache__/
+
+# Virtual environment
+venv/
+env/
+
+# Django
+*.sqlite3
+*.log
+db.sqlite3
+
+# Secret file
+.env
+
+# VS Code settings (opsional)
+.vscode/
+
+# Mac system file
+.DS_Store
+

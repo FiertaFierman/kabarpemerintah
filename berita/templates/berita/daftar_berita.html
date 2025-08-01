@@ -1,0 +1,56 @@
+{% extends 'berita/base.html' %}
+
+{% block title %}Berita Terbaru{% endblock %}
+
+{% block content %}
+<h2 class="mb-4">Berita Terbaru</h2>
+<div class="row">
+    {% for b in berita_list %}
+    <div class="col-md-3 mb-4">
+        <div class="card h-100">
+            <div class="berita-thumbnail">
+                <img src="{{ b.gambar.url }}" class="card-img-top" alt="{{ b.judul }}">
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">{{ b.judul }}</h5>
+                <p class="card-text">{{ b.isi|truncatechars:100 }}</p>
+                <a href="{% url 'berita:detail' b.id %}" class="btn btn-danger">Baca Selengkapnya</a>
+            </div>
+        </div>
+    </div>
+    {% empty %}
+    <p>Belum ada berita.</p>
+    {% endfor %}
+    <div class="col-md-3">
+        {% for iklan in iklan_sidebar %}
+            <div class="mb-4">
+                <a href="{{ iklan.link }}" target="_blank">
+                    <img src="{{ iklan.gambar.url }}" alt="{{ iklan.judul }}" class="img-fluid">
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+
+    <div class="col-md-3">
+        <div class="card shadow-sm mb-4">
+            <div class="card-header bg-warning text-white fw-bold">
+                Artikel Pilihan
+            </div>
+            <div class="card-body">
+                {% for p in berita_pilihan %}
+                <div class="d-flex mb-3 border-bottom pb-2">
+                    <img src="{{ p.gambar.url }}" class="me-2 rounded" style="width: 80px; height: 60px; object-fit: cover;">
+                    <div>
+                    <a href="{% url 'berita:detail' p.id %}" class="text-decoration-none text-dark fw-semibold">
+                    <i class="fa-solid fa-angle-right me-1 text-danger"></i>{{ p.judul|truncatechars:50 }}
+                    </a>
+                    </div>
+                </div>
+                {% empty %}
+                <p>Tidak ada artikel pilihan.</p>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

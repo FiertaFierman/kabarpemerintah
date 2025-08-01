@@ -1,0 +1,866 @@
+[
+{
+  "model": "admin_interface.theme",
+  "pk": 1,
+  "fields": {
+    "name": "Django",
+    "active": true,
+    "title": "Django administration",
+    "title_color": "#F5DD5D",
+    "title_visible": true,
+    "logo": "",
+    "logo_color": "#FFFFFF",
+    "logo_max_width": 400,
+    "logo_max_height": 100,
+    "logo_visible": true,
+    "favicon": "",
+    "env_name": "",
+    "env_color": "#E74C3C",
+    "env_visible_in_header": true,
+    "env_visible_in_favicon": true,
+    "language_chooser_active": true,
+    "language_chooser_control": "default-select",
+    "language_chooser_display": "code",
+    "css_header_background_color": "#0C4B33",
+    "css_header_text_color": "#44B78B",
+    "css_header_link_color": "#FFFFFF",
+    "css_header_link_hover_color": "#C9F0DD",
+    "css_module_background_color": "#44B78B",
+    "css_module_background_selected_color": "#FFFFCC",
+    "css_module_text_color": "#FFFFFF",
+    "css_module_link_color": "#FFFFFF",
+    "css_module_link_selected_color": "#FFFFFF",
+    "css_module_link_hover_color": "#C9F0DD",
+    "css_module_rounded_corners": true,
+    "css_generic_link_color": "#0C3C26",
+    "css_generic_link_hover_color": "#156641",
+    "css_generic_link_active_color": "#29B864",
+    "css_save_button_background_color": "#0C4B33",
+    "css_save_button_background_hover_color": "#0C3C26",
+    "css_save_button_text_color": "#FFFFFF",
+    "css_delete_button_background_color": "#BA2121",
+    "css_delete_button_background_hover_color": "#A41515",
+    "css_delete_button_text_color": "#FFFFFF",
+    "related_modal_active": true,
+    "related_modal_background_color": "#000000",
+    "related_modal_background_opacity": "0.3",
+    "related_modal_rounded_corners": true,
+    "related_modal_close_button_visible": true,
+    "list_filter_highlight": true,
+    "list_filter_dropdown": true,
+    "list_filter_sticky": true,
+    "list_filter_removal_links": false,
+    "foldable_apps": true,
+    "show_fieldsets_as_tabs": false,
+    "show_inlines_as_tabs": false,
+    "collapsible_stacked_inlines": false,
+    "collapsible_stacked_inlines_collapsed": true,
+    "collapsible_tabular_inlines": false,
+    "collapsible_tabular_inlines_collapsed": true,
+    "recent_actions_visible": true,
+    "form_submit_sticky": false,
+    "form_pagination_sticky": false
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$1W5TbNAWqkxhqQ8IdeLCpP$YMfuBfgernC1jbdCwlFqkfdtStYUtLSG9dVeXw9UqUE=",
+    "last_login": "2025-07-31T01:49:57.782Z",
+    "is_superuser": true,
+    "username": "firman",
+    "first_name": "",
+    "last_name": "",
+    "email": "firmanarif58@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2025-07-21T02:16:59.059Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "egibf9la9d6n9kn6t0744ox3xddf8ksn",
+  "fields": {
+    "session_data": ".eJxVjEEOgjAQRe_StWmm7QDWpXvOQKbTGUFNSSisjHdXEha6_e-9_zIDbes4bFWWYcrmYpw5_W6J-CFlB_lO5TZbnsu6TMnuij1otf2c5Xk93L-Dker4rX0bgzTZewmhC4wsgaMGhegYxBFm7RBAqUVF12oE1yVozpoTCSOa9wfaXDf3:1uf9Hk:_fwd1_hHqfGPwOlvJ2J1ygdvWky8T6JlVn0IOSgP24k",
+    "expire_date": "2025-08-08T03:39:52.441Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "u8tw19sa9q7uaofggs0fu31w72k0f51y",
+  "fields": {
+    "session_data": ".eJxVjEEOgjAQRe_StWmm7QDWpXvOQKbTGUFNSSisjHdXEha6_e-9_zIDbes4bFWWYcrmYpw5_W6J-CFlB_lO5TZbnsu6TMnuij1otf2c5Xk93L-Dker4rX0bgzTZewmhC4wsgaMGhegYxBFm7RBAqUVF12oE1yVozpoTCSOa9wfaXDf3:1uhIQf:fpkNyi5OG49M70nnJ6zFJSrigSv1D99xFPiROiXoEA8",
+    "expire_date": "2025-08-14T01:49:57.792Z"
+  }
+},
+{
+  "model": "berita.kategori",
+  "pk": 4,
+  "fields": {
+    "nama": "Home",
+    "slug": "home"
+  }
+},
+{
+  "model": "berita.kategori",
+  "pk": 5,
+  "fields": {
+    "nama": "Pemerintahan",
+    "slug": "pemerintahan"
+  }
+},
+{
+  "model": "berita.kategori",
+  "pk": 6,
+  "fields": {
+    "nama": "News",
+    "slug": "news"
+  }
+},
+{
+  "model": "berita.kategori",
+  "pk": 7,
+  "fields": {
+    "nama": "Politik",
+    "slug": "politik"
+  }
+},
+{
+  "model": "berita.kategori",
+  "pk": 8,
+  "fields": {
+    "nama": "Ekonomi",
+    "slug": "ekonomi"
+  }
+},
+{
+  "model": "berita.kategori",
+  "pk": 9,
+  "fields": {
+    "nama": "Kesehatan",
+    "slug": "kesehatan"
+  }
+},
+{
+  "model": "berita.kategori",
+  "pk": 10,
+  "fields": {
+    "nama": "Olahraga",
+    "slug": "olahraga"
+  }
+},
+{
+  "model": "berita.kategori",
+  "pk": 11,
+  "fields": {
+    "nama": "Teknologi",
+    "slug": "teknologi"
+  }
+},
+{
+  "model": "berita.kategori",
+  "pk": 12,
+  "fields": {
+    "nama": "Artis",
+    "slug": "artis"
+  }
+},
+{
+  "model": "berita.kategori",
+  "pk": 13,
+  "fields": {
+    "nama": "Opini",
+    "slug": "opini"
+  }
+},
+{
+  "model": "berita.berita",
+  "pk": 3,
+  "fields": {
+    "judul": "Vonis Bui dan Denda Tom Lembong Meski Disebut Tak Nikmati Duit Korupsi",
+    "slug": "vonis-bui-dan-denda-tom-lembong-meski-disebut-tak",
+    "isi": "Mantan Menteri Perdagangan Thomas Trikasih Lembong atau Tom Lembong divonis 4,5 tahun penjara dan denda Rp 750 juta dalam kasus korupsi impor gula. Tom Lembong dihukum penjara dan denda meski hakim menyebut Tom tak menikmati duit korupsi.\r\n\r\nVonis Tom Lembong dibacakan dalam persidangan di Pengadilan Tipikor Jakarta Pusat, Jumat (18/7/2025). Hakim awalnya menguraikan unsur-unsur dalam pasal 2 ayat 1 UU Pemberantasan Tipikor yang didakwakan terhadap Tom.\r\n\r\nBaca artikel detiknews, \"Vonis Bui dan Denda Tom Lembong Meski Disebut Tak Nikmati Duit Korupsi\" selengkapnya https://news.detik.com/berita/d-8021057/vonis-bui-dan-denda-tom-\r\n\"Menimbang bahwa setelah pemberian persetujuan impor kepada delapan pabrik gula swasta, Karyoto Supri selaku Plt Direktur Jenderal Perdagangan Luar Negeri melaporkannya kepada Terdakwa dengan nota dinas,\" kata hakim seperti dikutip Senin (21/7/2025).\r\n\r\nHakim menyebut Tom Lembong memahami penerbitan izin impor itu melanggar Peraturan Menteri Perdagangan (Permendag) Nomor 117 tentang Ketentuan Impor Gula. Hakim menyatakan penerbitan izin impor tersebut dilakukan tanpa rekomendasi dari Direktur Industri Agro Kementerian Perindustrian.\r\n\r\nBaca artikel detiknews, \"Vonis Bui dan Denda Tom Lembong Meski Disebut Tak Nikmati Duit Korupsi\" selengkapnya https://news.detik.com/berita/d-8021057/vonis-bui-dan-denda-tom-lembong-meski-disebut-tak-nikmati-duit-korupsi.\r\n\r\nDownload Apps Detikcom Sekarang https://apps.detik.com/detik/",
+    "gambar": "gambar/ekspresi-tom-lembong-hadapi-sidang-vonis-kasus-korupsi-gula-1752828409163_169_4x5OiiK.jpeg",
+    "penulis": [
+      "firman"
+    ],
+    "tanggal_publish": "2025-07-22T04:44:30.642Z",
+    "status": "published",
+    "kategori": 7,
+    "pilihan": true
+  }
+},
+{
+  "model": "berita.berita",
+  "pk": 4,
+  "fields": {
+    "judul": "Rehan/Gloria Harap Bikin Kejutan di China Open 2025  Baca artikel detiksport, \"Rehan/Gloria Harap Bikin Kejutan di China Open 2025",
+    "slug": "rehangloria-harap-bikin-kejutan-di-china-open-2025",
+    "isi": "Rehan Naufal Kusharjanto/Gloria Emanuelle Widjaja berharap bikin kejutan di China Open 2025. Sebagai langkah awal, mereka sukses melewati tantangan di babak pertama.\r\n\r\nBertanding di Olympic Sports Center Gymnasium, Changzhou, pada Selasa (22/7/2025), Rehan/Gloria berhasil mengalahkan pasangan India Ashith Surya/Amrutha Pramuthesh. Mereka mengunci tiket babak kedua usai mencetak skor kemenangan 21-12, 21-17.\r\n\r\nRehan/Gloria bersyukur bisa melewati adangan di babak 32 besar dengan lancar dan tanpa cedera.\r\n\r\nBaca artikel detiksport, \"Rehan/Gloria Harap Bikin Kejutan di China Open 2025\" selengkapnya https://sport.detik.com/raket/d-8023137/rehan-gloria-harap-bikin-kejutan-di-china-open-2025.\r\n\r\nDownload Apps Detikcom Sekarang https://apps.detik.com/detik/\r\nRehan Naufal Kusharjanto/Gloria Emanuelle Widjaja berharap bikin kejutan di China Open 2025. Sebagai langkah awal, mereka sukses melewati tantangan di babak pertama.\r\n\r\nBertanding di Olympic Sports Center Gymnasium, Changzhou, pada Selasa (22/7/2025), Rehan/Gloria berhasil mengalahkan pasangan India Ashith Surya/Amrutha Pramuthesh. Mereka mengunci tiket babak kedua usai mencetak skor kemenangan 21-12, 21-17.\r\n\r\nRehan/Gloria bersyukur bisa melewati adangan di babak 32 besar dengan lancar dan tanpa cedera.\r\n\r\nBaca artikel detiksport, \"Rehan/Gloria Harap Bikin Kejutan di China Open 2025\" selengkapnya https://sport.detik.com/raket/d-8023137/rehan-gloria-harap-bikin-kejutan-di-china-open-2025.\r\n\r\nDownload Apps Detikcom Sekarang https://apps.detik.com/detik/",
+    "gambar": "gambar/rehan-naufal-kusharjantogloria-emanuelle-widjaja-1748502425166.jpeg",
+    "penulis": [
+      "firman"
+    ],
+    "tanggal_publish": "2025-07-22T05:01:55.506Z",
+    "status": "published",
+    "kategori": 10,
+    "pilihan": true
+  }
+},
+{
+  "model": "berita.berita",
+  "pk": 5,
+  "fields": {
+    "judul": "Putri Kusuma Wardani Langsung Tersingkir di China Open 2025",
+    "slug": "putri-kusuma-wardani-langsung-tersingkir-di-china",
+    "isi": "Jakarta - Tunggal putri Indonesia Putri Kusuma Wardani langsung tersingkir dari China Open 2025. Pemain peringkat ke-11 dunia itu kalah menghadapi wakil Korea Selatan Sim Yu Ji setelah bermain tiga game, 21-14, 14-21, 21-19, Selasa, 22 Juli 2025.\r\n\r\nBertanding di lapangan 2 Olympic Sports Center Gymnasium, sebagai partai pertama, Selasa pagi WIB, Putri sempat unggul 4-1 di awal. Namun, Sim Yu Ji mampu mengejar sehingga kedudukan menjadi 7-8 dan setelah nilainya melesat setelah kedudukan 8-8. \r\nJakarta - Tunggal putri Indonesia Putri Kusuma Wardani langsung tersingkir dari China Open 2025. Pemain peringkat ke-11 dunia itu kalah menghadapi wakil Korea Selatan Sim Yu Ji setelah bermain tiga game, 21-14, 14-21, 21-19, Selasa, 22 Juli 2025.\r\n\r\nBertanding di lapangan 2 Olympic Sports Center Gymnasium, sebagai partai pertama, Selasa pagi WIB, Putri sempat unggul 4-1 di awal. Namun, Sim Yu Ji mampu mengejar sehingga kedudukan menjadi 7-8 dan setelah nilainya melesat setelah kedudukan 8-8.",
+    "gambar": "gambar/1413437_720.jpg",
+    "penulis": [
+      "firman"
+    ],
+    "tanggal_publish": "2025-07-22T05:06:31.401Z",
+    "status": "published",
+    "kategori": 10,
+    "pilihan": true
+  }
+},
+{
+  "model": "berita.berita",
+  "pk": 6,
+  "fields": {
+    "judul": "15 Persen ASN DKI Terindikasi Masalah Mental, Dinkes Dorong Pemeriksaan Lanjutan",
+    "slug": "15-persen-asn-dki-terindikasi-masalah-mental-dinke",
+    "isi": "Dinas Kesehatan (Dinkes) DKI Jakarta mencatat sekitar 15,03 persen aparatur sipil negara (ASN) di lingkungan Pemerintah Provinsi (Pemprov) DKI Jakarta terindikasi memiliki potensi gangguan kesehatan mental, berdasarkan hasil skrining pada tahun 2024. “Meski belum merupakan diagnosis medis, hasil ini menjadi sinyal penting perlunya konsultasi lebih lanjut dengan tenaga profesional,” kata Kepala Dinkes DKI Jakarta, Ani Ruspitawati, dalam keterangannya di Jakarta, Minggu (20/7/2025), seperti dikutip dari Antara. Data tersebut diperoleh dari pengukuran menggunakan alat Self-Reporting Questionnaire (SRQ-29) milik Organisasi Kesehatan Dunia (WHO), yang diikuti oleh 9.936 ASN. Sejumlah gejala yang ditemukan, antara lain gangguan tidur dan gejala emosional ringan.\r\n\r\nArtikel ini telah tayang di Kompas.com dengan judul \"15 Persen ASN DKI Terindikasi Masalah Mental, Dinkes Dorong Pemeriksaan Lanjutan\", Klik untuk baca: https://health.kompas.com/read/25G21110308668/15-persen-asn-dki-terindikasi-masalah-mental-dinkes-dorong-pemeriksaan-lanjutan.\r\n\r\n\r\nKompascom+ baca berita tanpa iklan: https://kmp.im/plus6\r\nDownload aplikasi: https://kmp.im/app6\r\nDinas Kesehatan (Dinkes) DKI Jakarta mencatat sekitar 15,03 persen aparatur sipil negara (ASN) di lingkungan Pemerintah Provinsi (Pemprov) DKI Jakarta terindikasi memiliki potensi gangguan kesehatan mental, berdasarkan hasil skrining pada tahun 2024. “Meski belum merupakan diagnosis medis, hasil ini menjadi sinyal penting perlunya konsultasi lebih lanjut dengan tenaga profesional,” kata Kepala Dinkes DKI Jakarta, Ani Ruspitawati, dalam keterangannya di Jakarta, Minggu (20/7/2025), seperti dikutip dari Antara. Data tersebut diperoleh dari pengukuran menggunakan alat Self-Reporting Questionnaire (SRQ-29) milik Organisasi Kesehatan Dunia (WHO), yang diikuti oleh 9.936 ASN. Sejumlah gejala yang ditemukan, antara lain gangguan tidur dan gejala emosional ringan.\r\n\r\nArtikel ini telah tayang di Kompas.com dengan judul \"15 Persen ASN DKI Terindikasi Masalah Mental, Dinkes Dorong Pemeriksaan Lanjutan\", Klik untuk baca: https://health.kompas.com/read/25G21110308668/15-persen-asn-dki-terindikasi-masalah-mental-dinkes-dorong-pemeriksaan-lanjutan.\r\n\r\n\r\nKompascom+ baca berita tanpa iklan: https://kmp.im/plus6\r\nDownload aplikasi: https://kmp.im/app6",
+    "gambar": "gambar/66f922c13927e.jpg",
+    "penulis": [
+      "firman"
+    ],
+    "tanggal_publish": "2025-07-22T05:11:40.539Z",
+    "status": "published",
+    "kategori": 9,
+    "pilihan": true
+  }
+},
+{
+  "model": "berita.bannerheader",
+  "pk": 1,
+  "fields": {
+    "judul": "Banner",
+    "gambar": "banner/desktop-wallpaper-timnas-indonesia-u-timnas-indonesia.jpg",
+    "aktif": true
+  }
+},
+{
+  "model": "berita.textberjalan",
+  "pk": 1,
+  "fields": {
+    "isi": "jika ada kendala hubungi kontak saya 087750552759"
+  }
+},
+{
+  "model": "berita.iklansidebar",
+  "pk": 1,
+  "fields": {
+    "judul": "Iklan Burger",
+    "gambar": "iklan/food-promotion-and-banner-post-design-template-3a6cfa8bb84c952fcd4225f835e8dd4e_screen.jpg",
+    "link": "https://id.postermywall.com/index.php/art/template/3a6cfa8bb84c952fcd4225f835e8dd4e/food-promotion-and-banner-post-design-template",
+    "aktif": true
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2025-07-21T02:49:22.917Z",
+    "user": [
+      "firman"
+    ],
+    "content_type": [
+      "berita",
+      "kategori"
+    ],
+    "object_id": "1",
+    "object_repr": "PEMERINTAHAN",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2025-07-21T02:53:00.699Z",
+    "user": [
+      "firman"
+    ],
+    "content_type": [
+      "berita",
+      "berita"
+    ],
+    "object_id": "1",
+    "object_repr": "Cerita 40 Menit Pertemuan Prabowo dengan Jokowi",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2025-07-21T02:57:04.669Z",
+    "user": [
+      "firman"
+    ],
+    "content_type": [
+      "berita",
+      "berita"
+    ],
+    "object_id": "1",
+    "object_repr": "Cerita 40 Menit Pertemuan Prabowo dengan Jokowi",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Gambar\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2025-07-21T02:57:24.753Z",
+    "user": [
+      "firman"
+    ],
+    "content_type": [
+      "berita",
+      "berita"
+    ],
+    "object_id": "1",
+    "object_repr": "Cerita 40 Menit Pertemuan Prabowo dengan Jokowi",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Status\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2025-07-21T05:02:58.597Z",
+    "user": [
+      "firman"
+    ],
+    "content_type": [
+      "berita",
+      "kategori"
+    ],
+    "object_id": "2",
+    "object_repr": "Olahraga",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2025-07-21T05:03:07.530Z",
+    "user": [
+      "firman"
+    ],
+    "content_type": [
+      "berita",
+      "kategori"
+    ],
+    "object_id": "1",
+    "object_repr": "PEMERINTAHAN",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Slug\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2025-07-21T05:31:25.763Z",
+    "user": [
+      "firman"
+    ],
+    "content_type": [
+      "berita",
+      "kategori"
+    ],
+    "object_id": "3",
+    "object_repr": "Kesehatan",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2025-07-22T01:47:43.193Z",
+    "user": [
+      "firman"
+    ],
+    "content_type": [
+      "berita",
+      "bannerheader"
+    ],
+    "object_id": "1",
+    "object_repr": "Banner",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2025-07-22T04:33:49.257Z",
+    "user": [
+      "firman"
+    ],
+    "content_type": [
+      "berita",
+      "berita"
+    ],
+    "object_id": "2",
+    "object_repr": "Vonis Bui dan Denda Tom Lembong Meski Disebut Tak Nikmati Duit Korupsi  Baca artikel detiknews, \"Vonis Bui dan Denda Tom Lembong Meski Disebut Tak Nikmati Duit Korupsi\" selengkapnya https://news.detik",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2025-07-22T04:38:31.562Z",
+    "user": [
+      "firman"
+    ],
+    "content_type": [
+      "berita",
+      "kategori"
+    ],
+    "object_id": "3",
+    "object_repr": "Kesehatan",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2025-07-22T04:38:31.563Z",
+    "user": [
+      "firman"
+    ],
+    "content_type": [
+      "berita",
+      "kategori"
+    ],
+    "object_id": "2",
+    "object_repr": "Olahraga",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2025-07-22T04:38:31.563Z",
+    "user": [
+      "firman"
+    ],
+    "content_type": [
+      "berita",
+      "kategori"
+    ],
+    "object_id": "1",
+    "object_repr": "PEMERINTAHAN",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2025-07-22T04:39:28.990Z",
+    "user": [
+      "firman"
+    ],
+    "content_type": [
+      "berita",
+      "kategori"
+    ],
+    "object_id": "4",
+    "object_repr": "Home",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2025-07-22T04:39:44.464Z",
+    "user": [
+      "firman"
+    ],
+    "content_type": [
+      "berita",
+      "kategori"
+    ],
+    "object_id": "5",
+    "object_repr": "Pemerintahan",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2025-07-22T04:39:54.162Z",
+    "user": [
+      "firman"
+    ],
+    "content_type": [
+      "berita",
+      "kategori"
+    ],
+    "object_id": "6",
+    "object_repr": "News",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2025-07-22T04:40:04.849Z",
+    "user": [
+      "firman"
+    ],
+    "content_type": [
+      "berita",
+      "kategori"
+    ],
+    "object_id": "7",
+    "object_repr": "Politik",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2025-07-22T04:40:20.887Z",
+    "user": [
+      "firman"
+    ],
+    "content_type": [
+      "berita",
+      "kategori"
+    ],
+    "object_id": "8",
+    "object_repr": "Ekonomi",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2025-07-22T04:40:35.916Z",
+    "user": [
+      "firman"
+    ],
+    "content_type": [
+      "berita",
+      "kategori"
+    ],
+    "object_id": "9",
+    "object_repr": "Kesehatan",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2025-07-22T04:40:48.726Z",
+    "user": [
+      "firman"
+    ],
+    "content_type": [
+      "berita",
+      "kategori"
+    ],
+    "object_id": "10",
+    "object_repr": "Olahraga",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2025-07-22T04:41:14.778Z",
+    "user": [
+      "firman"
+    ],
+    "content_type": [
+      "berita",
+      "kategori"
+    ],
+    "object_id": "11",
+    "object_repr": "Teknologi",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2025-07-22T04:41:21.267Z",
+    "user": [
+      "firman"
+    ],
+    "content_type": [
+      "berita",
+      "kategori"
+    ],
+    "object_id": "12",
+    "object_repr": "Artis",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2025-07-22T04:44:30.661Z",
+    "user": [
+      "firman"
+    ],
+    "content_type": [
+      "berita",
+      "berita"
+    ],
+    "object_id": "3",
+    "object_repr": "Vonis Bui dan Denda Tom Lembong Meski Disebut Tak Nikmati Duit Korupsi",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2025-07-22T05:01:55.525Z",
+    "user": [
+      "firman"
+    ],
+    "content_type": [
+      "berita",
+      "berita"
+    ],
+    "object_id": "4",
+    "object_repr": "Rehan/Gloria Harap Bikin Kejutan di China Open 2025  Baca artikel detiksport, \"Rehan/Gloria Harap Bikin Kejutan di China Open 2025",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2025-07-22T05:06:31.425Z",
+    "user": [
+      "firman"
+    ],
+    "content_type": [
+      "berita",
+      "berita"
+    ],
+    "object_id": "5",
+    "object_repr": "Putri Kusuma Wardani Langsung Tersingkir di China Open 2025",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2025-07-22T05:11:40.556Z",
+    "user": [
+      "firman"
+    ],
+    "content_type": [
+      "berita",
+      "berita"
+    ],
+    "object_id": "6",
+    "object_repr": "15 Persen ASN DKI Terindikasi Masalah Mental, Dinkes Dorong Pemeriksaan Lanjutan",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2025-07-24T00:52:56.416Z",
+    "user": [
+      "firman"
+    ],
+    "content_type": [
+      "berita",
+      "berita"
+    ],
+    "object_id": "3",
+    "object_repr": "Vonis Bui dan Denda Tom Lembong Meski Disebut Tak Nikmati Duit Korupsi",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Pilihan\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2025-07-24T01:10:20.619Z",
+    "user": [
+      "firman"
+    ],
+    "content_type": [
+      "berita",
+      "berita"
+    ],
+    "object_id": "5",
+    "object_repr": "Putri Kusuma Wardani Langsung Tersingkir di China Open 2025",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Pilihan\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2025-07-24T01:15:52.847Z",
+    "user": [
+      "firman"
+    ],
+    "content_type": [
+      "berita",
+      "berita"
+    ],
+    "object_id": "6",
+    "object_repr": "15 Persen ASN DKI Terindikasi Masalah Mental, Dinkes Dorong Pemeriksaan Lanjutan",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Pilihan\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2025-07-24T01:15:59.573Z",
+    "user": [
+      "firman"
+    ],
+    "content_type": [
+      "berita",
+      "berita"
+    ],
+    "object_id": "4",
+    "object_repr": "Rehan/Gloria Harap Bikin Kejutan di China Open 2025  Baca artikel detiksport, \"Rehan/Gloria Harap Bikin Kejutan di China Open 2025",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Pilihan\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 30,
+  "fields": {
+    "action_time": "2025-07-24T01:32:24.039Z",
+    "user": [
+      "firman"
+    ],
+    "content_type": [
+      "berita",
+      "textberjalan"
+    ],
+    "object_id": "1",
+    "object_repr": "Teks Berjalan",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 31,
+  "fields": {
+    "action_time": "2025-07-24T01:32:32.325Z",
+    "user": [
+      "firman"
+    ],
+    "content_type": [
+      "berita",
+      "textberjalan"
+    ],
+    "object_id": "1",
+    "object_repr": "Teks Berjalan",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 32,
+  "fields": {
+    "action_time": "2025-07-24T05:15:13.714Z",
+    "user": [
+      "firman"
+    ],
+    "content_type": [
+      "berita",
+      "kategori"
+    ],
+    "object_id": "13",
+    "object_repr": "Opini",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 33,
+  "fields": {
+    "action_time": "2025-07-25T04:45:43.941Z",
+    "user": [
+      "firman"
+    ],
+    "content_type": [
+      "berita",
+      "iklansidebar"
+    ],
+    "object_id": "1",
+    "object_repr": "Iklan Burger",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+}
+]
