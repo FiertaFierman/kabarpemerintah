@@ -30,6 +30,7 @@ ALLOWED_HOSTS = [
     '127.0.0.1',
     'e0f1f298c5a8.ngrok-free.app',
     '103.245.38.16',
+    'kabarpemerintah.com',
 ]
 
 CSRF_TRUSTED_ORIGINS = [
