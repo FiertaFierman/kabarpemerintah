@@ -2,11 +2,13 @@
 <footer class="bg-light py-4 mt-5 ps-3">
   <div class="">
     <div class="row">
-      
+      <div class="col-md-4">
+          <img src="{% static 'logo/logo.png' %}" style="height:50px; width:auto;" alt="Logo Kabarpemerintah" style="height: 50px;">
+      </div>
       <div class="col-md-4">
           <h5>Informasi</h5>
           <ul class="list-unstyled">
-              
+              <li><a href="{% url 'berita:tentang' %}">Tentang Kami</a></li>
               <li> <a href="{% url 'berita:kode_etik' %}">Kode Etik</a></li>
               <li> <a href="{% url 'berita:pedoman' %}">Pedoman Media Cyber</a></li>
               <li><a href="{% url 'berita:kontak' %}">Kontak</a></li>
