@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from .models import Berita, Kategori
 
 def daftar_berita(request):
-    berita_list = Berita.objects.filter(status='published').order_by('-tanggal_publish')[:3]
+    berita_list = Berita.objects.filter(status='published').order_by('-tanggal_publish')[:6]
     berita_pilihan = Berita.objects.filter(pilihan=True, status='published')[:5]
     return render(request, 'berita/daftar_berita.html', {'berita_list': berita_list, 'berita_pilihan': berita_pilihan})
 
