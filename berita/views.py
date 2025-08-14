@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from .models import Berita, Kategori
 
 def daftar_berita(request):
@@ -8,6 +8,8 @@ def daftar_berita(request):
 
 def berita_per_kategori(request, kategori_slug):
     kategori = get_object_or_404(Kategori, slug__iexact=kategori_slug)
+    if kategori_slug.lower() == "home":
+        return redirect('berita:daftar')
     berita_list = Berita.objects.filter(kategori=kategori, status='published').order_by('-tanggal_publish')
     return render(request, 'berita/daftar_berita.html', {
         'berita_list': berita_list,
