@@ -17,7 +17,7 @@
                     <div class="card-body">
                         <h5 class="card-title">{{ b.judul }}</h5>
                         <p class="card-text">{{ b.isi|truncatechars:100 }}</p>
-                        <a href="{% url 'berita:detail' b.id %}" class="btn btn-danger">Baca Selengkapnya</a>
+                        <a href="{% url 'berita:detail' b.slug %}" class="btn btn-danger">Baca Selengkapnya</a>
                     </div>
                 </div>
             </div>

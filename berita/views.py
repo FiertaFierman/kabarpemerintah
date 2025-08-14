@@ -16,8 +16,8 @@ def berita_per_kategori(request, kategori_slug):
         'kategori': kategori
     })
 
-def detail_berita(request, berita_id):
-    berita = get_object_or_404(Berita, pk=berita_id)
+def detail_berita(request, slug):
+    berita = get_object_or_404(Berita, slug=slug)
     return render(request, 'berita/detail_berita.html', {'berita': berita})
 
 def cari_berita(request):

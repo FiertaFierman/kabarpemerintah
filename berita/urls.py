@@ -11,6 +11,6 @@ urlpatterns = [
     path('kode-etik/', views.kode_etik, name='kode_etik'),
     path('pedoman-media-cyber/', views.pedoman, name='pedoman'),
     path('kontak/', views.kontak, name='kontak'),
-    path('<int:berita_id>/', views.detail_berita, name='detail'),
+    path('<slug:slug>/', views.detail_berita, name='detail'),
     path('<slug:kategori_slug>/', views.berita_per_kategori, name='kategori'),
 ]
