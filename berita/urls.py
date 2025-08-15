@@ -1,10 +1,12 @@
 from django.urls import path
+from django.views.generic import RedirectView
 from . import views
 
 app_name = 'berita'
 
 urlpatterns = [
     path('', views.daftar_berita, name='daftar'),
+    path('favicon.ico', RedirectView.as_view(url='/static/logo/favicon.ico')),
     path('cari/', views.cari_berita, name='cari'),
     path('tentang/', views.tentang, name='tentang'),
     path('redaksi/', views.redaksi, name='redaksi'),
