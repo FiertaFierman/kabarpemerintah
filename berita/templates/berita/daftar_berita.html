@@ -48,7 +48,7 @@
                 <div class="d-flex mb-3 border-bottom pb-2">
                     <img src="{{ p.gambar.url }}" class="me-2 rounded" style="width: 80px; height: 60px; object-fit: cover;">
                     <div>
-                        <a href="{% url 'berita:detail' p.id %}" class="text-decoration-none text-dark fw-semibold">
+                        <a href="{% url 'berita:detail' p.slug %}" class="text-decoration-none text-dark fw-semibold">
                             <i class="fa-solid fa-angle-right me-1 text-danger"></i>{{ p.judul|truncatechars:50 }}
                         </a>
                     </div>
