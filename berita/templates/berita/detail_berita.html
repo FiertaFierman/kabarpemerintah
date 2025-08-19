@@ -2,6 +2,14 @@
 
 {% block title %}{{ berita.judul }}{% endblock %}
 
+{% block meta %}
+    <meta property="og:title" content="{{ berita.judul }}">
+    <meta property="og:description" content="{{ berita.isi|truncatewords:50 }}">
+    <meta property="og:image" content="{{ absolute_image_url }}">
+    <meta property="og:url" content="{{ request.build_absolute_uri }}">
+    <meta property="og:type" content="article">
+{% endblock %}
+
 {% block content %}
 <article>
     <h2>{{ berita.judul }}</h2>

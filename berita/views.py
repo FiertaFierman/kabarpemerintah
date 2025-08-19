@@ -18,7 +18,11 @@ def berita_per_kategori(request, kategori_slug):
 
 def detail_berita(request, slug):
     berita = get_object_or_404(Berita, slug=slug)
-    return render(request, 'berita/detail_berita.html', {'berita': berita})
+    absolute_image_url = request.build_absolute_uri(berita.gambar.url)  # bikin URL absolut
+    return render(request, 'berita/detail_berita.html', {
+        'berita': berita,
+        'absolute_image_url': absolute_image_url
+    })
 
 def cari_berita(request):
     query = request.GET.get('q')
