@@ -28,6 +28,7 @@ class Berita(models.Model):
     ], default='draft')
     kategori = models.ForeignKey(Kategori, on_delete=models.CASCADE)
     pilihan = models.BooleanField(default=False)
+    caption = models.CharField(max_length=255, blank=True, null=True)
 
     def __str__(self):
         return self.judul
