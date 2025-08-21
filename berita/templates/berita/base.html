@@ -115,67 +115,68 @@
 <body>
     <div class="batik-background">
         <div class="container">
-             <!-- Header -->
-            {% include 'partials/header.html' %}
             <!-- Navbar -->
-             <div class="bg-white border-bottom py-2 sticky-top">
-                <div class="d-flex flex-wrap ps-4 align-items-center">
-                    <div class="col-md-4">
-                        <img src="{% static 'logo/logo.png' %}" style="height:50px; width:auto; max-width:100%;" alt="Logo Kabarpemerintah" style="height: 50px;">
-                    </div>
-                    <form class="d-flex ms-auto" method="get" action="{% url 'berita:cari' %}">
-                        <input class="form-control me-2" type="search" name="q" placeholder="Cari berita..." aria-label="Search">
-                        <button class="btn btn-outline-danger" type="submit">Cari</button>
-                    </form>
-                </div>
-             </div>
-            {% if teks_berjalan %}
-            <div class="marquee-wrapper bg-primary text-white py-2 overflow-hidden position-relative">
-            <div class="marquee-content">
-                {{ teks_berjalan.isi|safe }}
-            </div>
-            </div>
-            {% endif %}
-            <!-- Menu Kategori Horizontal -->
-            <div class="bg-light border-bottom py-2 sticky-top shadow-sm">
-                <div class="d-flex flex-wrap ps-3 align-items-center gap-2">
-                    {# Kategori utama (max 9) #}
-                    {% for kategori in daftar_kategori|slice:":9" %}
-                        <a href="{% url 'berita:kategori' kategori.slug %}" 
-                        class="px-3 py-1 rounded-pill {% if kategori.slug == request.resolver_match.kwargs.kategori_slug %}
-                                bg-danger text-white fw-bold
-                        {% else %}
-                                bg-danger border text-white
-                        {% endif %}">
-                            {{ kategori.nama }}
-                        </a>
-                    {% endfor %}
+             <div class="sticky-top">
+                <!-- Header -->
+                {% include 'partials/header.html' %}
 
-                    {# Dropdown "Lainnya" jika ada lebih dari 9 kategori #}
-                    {% if daftar_kategori|length > 9 %}
-                        <div class="dropdown">
-                            <a class="px-3 py-1 rounded-pill bg-danger border text-white dropdown-toggle" 
-                            href="#" id="dropdownKategoriLainnya" 
-                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Lainnya
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="dropdownKategoriLainnya">
-                                {% for kategori in daftar_kategori|slice:"9:" %}
-                                    <li>
-                                        <a class="dropdown-item {% if kategori.slug == request.resolver_match.kwargs.kategori_slug %}fw-bold text-danger{% endif %}" 
-                                        href="{% url 'berita:kategori' kategori.slug %}">
-                                            {{ kategori.nama }}
-                                        </a>
-                                    </li>
-                                {% endfor %}
-                            </ul>
+                <div class="bg-white border-bottom py-2">
+                    <div class="d-flex flex-wrap ps-4 align-items-center">
+                        <div class="col-md-4">
+                            <img src="{% static 'logo/logo.png' %}" style="height:50px; width:auto; max-width:100%;" alt="Logo Kabarpemerintah" style="height: 50px;">
                         </div>
-                    {% endif %}
+                        <form class="d-flex ms-auto" method="get" action="{% url 'berita:cari' %}">
+                            <input class="form-control me-2" type="search" name="q" placeholder="Cari berita..." aria-label="Search">
+                            <button class="btn btn-outline-danger" type="submit">Cari</button>
+                        </form>
+                    </div>
+                </div>
+                {% if teks_berjalan %}
+                <div class="marquee-wrapper bg-primary text-white py-2 overflow-hidden position-relative">
+                <div class="marquee-content">
+                    {{ teks_berjalan.isi|safe }}
+                </div>
+                </div>
+                {% endif %}
+                <!-- Menu Kategori Horizontal -->
+                <div class="bg-light border-bottom py-2 shadow-sm">
+                    <div class="d-flex flex-wrap ps-3 align-items-center gap-2">
+                        {# Kategori utama (max 8) #}
+                        {% for kategori in daftar_kategori|slice:":8" %}
+                            <a href="{% url 'berita:kategori' kategori.slug %}" 
+                            class="px-3 py-1 rounded-pill {% if kategori.slug == request.resolver_match.kwargs.kategori_slug %}
+                                    bg-danger text-white fw-bold
+                            {% else %}
+                                    bg-danger border text-white
+                            {% endif %}">
+                                {{ kategori.nama }}
+                            </a>
+                        {% endfor %}
+
+                        {# Dropdown "Lainnya" jika ada lebih dari 8 kategori #}
+                        {% if daftar_kategori|length > 8 %}
+                            <div class="dropdown">
+                                <a class="px-3 py-1 rounded-pill bg-danger border text-white dropdown-toggle" 
+                                href="#" id="dropdownKategoriLainnya" 
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Lainnya
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownKategoriLainnya">
+                                    {% for kategori in daftar_kategori|slice:"8:" %}
+                                        <li>
+                                            <a class="dropdown-item {% if kategori.slug == request.resolver_match.kwargs.kategori_slug %}fw-bold text-danger{% endif %}" 
+                                            href="{% url 'berita:kategori' kategori.slug %}">
+                                                {{ kategori.nama }}
+                                            </a>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        {% endif %}
+                    </div>
                 </div>
             </div>
-
-
-
+        
             <!-- Konten Utama -->
             <div class="mb-5">
                 {% block content %}{% endblock %}
