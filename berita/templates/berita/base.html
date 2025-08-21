@@ -127,9 +127,9 @@
             {% endif %}
             <!-- Menu Kategori Horizontal -->
             <div class="bg-light border-bottom py-2 sticky-top">
-                <div class="col-md-4">
+                <div class="d-flex flex-wrap ps-3 align-items-center"><div class="col-md-4">
           <img src="{% static 'logo/logo.png' %}" style="height:50px; width:auto; max-width:100%;" alt="Logo Kabarpemerintah" style="height: 50px;">
-      </div>
+      </div></div>
                 <div class="d-flex flex-wrap ps-3 align-items-center">
                     {# Kategori utama (max 9) #}
                     {% for kategori in daftar_kategori|slice:":9" %}
