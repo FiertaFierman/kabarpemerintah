@@ -122,6 +122,31 @@
         transform: translateX(-100%);
     }
     }
+    .kategori-scroll {
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch; /* biar smooth di iPhone */
+        padding: 5px;
+    }
+    .kategori-scroll a, 
+    .kategori-scroll .dropdown {
+        display: inline-block;
+        flex: 0 0 auto; /* jangan menyusut */
+    }
+    /* Mobile: hilangkan background batik */
+    @media (max-width: 768px) {
+        .batik-background {
+            background: none !important;
+            background-color: #fff !important; /* ganti warna polos */
+        }
+
+        .container {
+            width: 100% !important;   /* biar full layar */
+            max-width: 100% !important;
+            padding: 10px;           /* agak tipis di HP */
+            box-shadow: none;        /* hilangkan shadow */
+        }
+    }
     </style>
 </head>
 <body>
@@ -152,7 +177,7 @@
                 {% endif %}
                 <!-- Menu Kategori Horizontal -->
                 <div class="bg-light border-bottom py-2 shadow-sm">
-                    <div class="d-flex flex-wrap ps-3 align-items-center gap-2">
+                    <div class="kategori-scroll d-flex ps-3 align-items-center gap-2">
                         {# Kategori utama (max 8) #}
                         {% for kategori in daftar_kategori|slice:":8" %}
                             <a href="{% url 'berita:kategori' kategori.slug %}" 
