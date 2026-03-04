@@ -29,7 +29,7 @@ ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
     'e0f1f298c5a8.ngrok-free.app',
-    '103.245.38.16',
+    '38.147.122.65',
     'kabarpemerintah.com',
 ]
 
