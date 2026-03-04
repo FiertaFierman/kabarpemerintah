@@ -23,9 +23,15 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 's#9^kcczlkp4i0csj!l5+0^p5idbftdikbw$ab(g%z=f@$nfzy'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = [
+    'localhost',
+    '127.0.0.1',
+    'e0f1f298c5a8.ngrok-free.app',
+    '38.147.122.65',
+    'kabarpemerintah.com',
+]
 
 CSRF_TRUSTED_ORIGINS = [
     'https://e0f1f298c5a8.ngrok-free.app',  # <- tambahkan ini
