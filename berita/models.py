@@ -30,6 +30,7 @@ class Berita(models.Model):
     pilihan = models.BooleanField(default=False)
     caption = models.CharField(max_length=255, blank=True, null=True)
     is_headline = models.BooleanField(default=False)
+    views = models.PositiveIntegerField(default=0)
 
     def __str__(self):
         return self.judul

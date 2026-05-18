@@ -1,11 +1,13 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import Berita, Kategori
+from django.db.models import F
 
 def daftar_berita(request):
     berita_list = Berita.objects.filter(status='published').order_by('-tanggal_publish')[:6]
     berita_pilihan = Berita.objects.filter(pilihan=True, status='published')[:5]
     headlines = Berita.objects.filter(is_headline=True, status='published').order_by('-tanggal_publish')[:5]
-    return render(request, 'berita/daftar_berita.html', {'berita_list': berita_list, 'berita_pilihan': berita_pilihan, 'headlines': headlines})
+    popular_posts = Berita.objects.filter(status='published', views__gt=0).order_by('-views')[:5]
+    return render(request, 'berita/daftar_berita.html', {'berita_list': berita_list, 'berita_pilihan': berita_pilihan, 'headlines': headlines, 'popular_posts': popular_posts})
 
 def berita_per_kategori(request, kategori_slug):
     kategori = get_object_or_404(Kategori, slug__iexact=kategori_slug)
@@ -20,6 +22,10 @@ def berita_per_kategori(request, kategori_slug):
 def detail_berita(request, slug):
     berita = get_object_or_404(Berita, slug=slug)
     absolute_image_url = request.build_absolute_uri(berita.gambar.url)  # bikin URL absolut
+
+    # Tambah jumlah view
+    Berita.objects.filter(id=berita.id).update(views=F('views') + 1)
+
     return render(request, 'berita/detail_berita.html', {
         'berita': berita,
         'absolute_image_url': absolute_image_url

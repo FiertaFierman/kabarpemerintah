@@ -86,7 +86,27 @@
             </a>
         </div>
         {% endfor %}
+        <!-- Wrapper -->
+        <div class="topik-wrapper mb-4">
+            <!-- Box -->
+            <div class="topik-populer">
+                <div class="topik-header">
+                    🔥 Topik Populer
+                </div>
 
+                <ul class="topik-list">
+                    {% for p in popular_posts %}
+                    <li>
+                        <span class="icon">➤</span>
+                        <a href="{% url 'berita:detail' p.slug %}">
+                            {{ p.judul|truncatechars:40 }}
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        
         <!-- Artikel Pilihan -->
         <div class="card shadow-sm mb-4">
             <div class="card-header bg-primary text-white fw-bold">
