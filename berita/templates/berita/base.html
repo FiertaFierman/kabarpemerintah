@@ -122,16 +122,33 @@
         transform: translateX(-100%);
     }
     }
+   .kategori-scroll a {
+        font-size: 16px;       /* dari default ~13px jadi lebih besar */
+        font-weight: 600;      /* semi-bold */
+        letter-spacing: 0.3px; /* biar lebih elegan */
+    }
+
+    .kategori-scroll a.fw-bold {
+        font-weight: 700;      /* kategori aktif lebih tebal */
+        border-bottom: 2px solid white;
+    }
+
     .kategori-scroll {
         overflow-x: auto;
         white-space: nowrap;
-        -webkit-overflow-scrolling: touch; /* biar smooth di iPhone */
-        padding: 5px;
     }
-    .kategori-scroll a, 
-    .kategori-scroll .dropdown {
-        display: inline-block;
-        flex: 0 0 auto; /* jangan menyusut */
+
+    .kategori-scroll::-webkit-scrollbar {
+        height: 4px;
+    }
+
+    .kategori-scroll::-webkit-scrollbar-thumb {
+        background: rgba(255,255,255,0.5);
+        border-radius: 10px;
+    }
+    .kategori-scroll a:hover {
+        background: rgba(255,255,255,0.2);
+        border-radius: 5px;
     }
     /* Mobile: hilangkan background batik */
     @media (max-width: 768px) {
@@ -169,23 +186,20 @@
                     </div>
                 </div>
                 {% if teks_berjalan %}
-                <div class="marquee-wrapper bg-primary text-white py-2 overflow-hidden position-relative">
-                <div class="marquee-content">
-                    {{ teks_berjalan.isi|safe }}
-                </div>
+                <div class="marquee-wrapper bg-primary text-white py-1 px-3">
+                    <div class="marquee-content">
+                        {{ teks_berjalan.isi|safe }}
+                    </div>
                 </div>
                 {% endif %}
+                <div style="height:6px;"></div>
                 <!-- Menu Kategori Horizontal -->
-                <div class="bg-danger border-bottom py-2 shadow-sm">
-                    <div class="kategori-scroll d-flex ps-3 align-items-center gap-2">
+                <div class="bg-danger shadow-sm">
+                     <div class="kategori-scroll d-flex align-items-center gap-2 px-3 py-1">
                         {# Kategori utama (max 8) #}
                         {% for kategori in daftar_kategori|slice:":8" %}
                             <a href="{% url 'berita:kategori' kategori.slug %}" 
-                            class="px-3 py-1 {% if kategori.slug == request.resolver_match.kwargs.kategori_slug %}
-                                     text-white fw-bold
-                            {% else %}
-                                      text-white
-                            {% endif %}">
+                            class="text-white {% if kategori.slug == request.resolver_match.kwargs.kategori_slug %}fw-bold{% endif %}">
                                 {{ kategori.nama }}
                             </a>
                         {% endfor %}
@@ -193,7 +207,7 @@
                         {# Dropdown "Lainnya" jika ada lebih dari 8 kategori #}
                         {% if daftar_kategori|length > 8 %}
                             <div class="dropdown">
-                                <a class="px-3 py-1 bg-danger text-white dropdown-toggle" 
+                                <a class="text-white dropdown-toggle px-2"
                                 href="#" id="dropdownKategoriLainnya" 
                                 role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Lainnya

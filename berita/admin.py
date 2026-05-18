@@ -4,7 +4,7 @@ from .models import Berita, Kategori, BannerHeader, TextBerjalan, IklanSidebar
 class BeritaAdmin(admin.ModelAdmin):
     prepopulated_fields = {"slug": ("judul",)}
     list_display = ('judul', 'penulis', 'status', 'tanggal_publish', 'pilihan', 'caption')
-    list_filter = ('status', 'tanggal_publish', 'pilihan')
+    list_filter = ('status', 'tanggal_publish', 'pilihan', 'is_headline')
     search_fields = ('judul', 'isi')
 
 @admin.register(TextBerjalan)

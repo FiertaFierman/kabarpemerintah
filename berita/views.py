@@ -4,7 +4,8 @@ from .models import Berita, Kategori
 def daftar_berita(request):
     berita_list = Berita.objects.filter(status='published').order_by('-tanggal_publish')[:6]
     berita_pilihan = Berita.objects.filter(pilihan=True, status='published')[:5]
-    return render(request, 'berita/daftar_berita.html', {'berita_list': berita_list, 'berita_pilihan': berita_pilihan})
+    headlines = Berita.objects.filter(is_headline=True, status='published').order_by('-tanggal_publish')[:5]
+    return render(request, 'berita/daftar_berita.html', {'berita_list': berita_list, 'berita_pilihan': berita_pilihan, 'headlines': headlines})
 
 def berita_per_kategori(request, kategori_slug):
     kategori = get_object_or_404(Kategori, slug__iexact=kategori_slug)
