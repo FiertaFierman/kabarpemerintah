@@ -53,3 +53,6 @@ def pedoman(request):
 
 def kontak(request):
     return render(request, 'berita/kontak.html')
+
+def kebijakan(request):
+    return render(request, 'berita/kebijakanprivasi.html')
